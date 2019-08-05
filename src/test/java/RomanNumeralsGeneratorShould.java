@@ -20,6 +20,7 @@ public class RomanNumeralsGeneratorShould {
         assertThat(generator.generate(8), is("VIII"));
 
 
+        assertThat(generator.generate(9), is("IX"));
         assertThat(generator.generate(10), is("X"));
         assertThat(generator.generate(11), is("XI"));
         assertThat(generator.generate(12), is("XII"));
@@ -32,6 +33,15 @@ public class RomanNumeralsGeneratorShould {
         assertThat(generator.generate(18), is("XVIII"));
 
 
+        assertThat(generator.generate(20), is("XX"));
+        assertThat(generator.generate(21), is("XXI"));
+        assertThat(generator.generate(22), is("XXII"));
+
+
+        assertThat(generator.generate(846), is("DCCCXLVI"));
+        assertThat(generator.generate(1999), is("MCMXCIX"));
+        assertThat(generator.generate(2008), is("MMVIII"));
+        assertThat(generator.generate(3999), is("MMMCMXCIX"));
 
     }
 

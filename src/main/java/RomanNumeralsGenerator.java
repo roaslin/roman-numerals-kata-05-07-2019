@@ -1,26 +1,54 @@
 public class RomanNumeralsGenerator {
+
     public String generate(int arabicNumber) {
 
         String numeral = "";
 
-        if(arabicNumber >= 10){
 
-            numeral += "X";
-            arabicNumber -=10;
-        }
+        for(RomanNumerals romanNumeral : RomanNumerals.values()){
 
-        if(arabicNumber >= 5){
+            while (arabicNumber >= romanNumeral.getArabic()) {
 
-            numeral += "V";
-            arabicNumber -=5;
-        }
-
-
-        for(int i = 0; i < arabicNumber;i++){
-
-            numeral += "I";
+                numeral += romanNumeral.getValue();
+                arabicNumber -= romanNumeral.getArabic();
+            }
         }
 
         return numeral;
+    }
+
+    public enum RomanNumerals {
+        THOUSAND("M", 1000),
+        NINE_HUNDRED("CM", 900),
+        FIVE_HUNDRED("D", 500),
+        HUNDRED("C", 100),
+        NINETY("XC", 90),
+        FIFTY("L", 50),
+        FORTY("XL", 40),
+        TEN("X", 10),
+        NINE("IX", 9),
+        FIVE("V", 5),
+        FOUR("IV", 4),
+        ONE("I", 1);
+
+        private String value;
+        private int arabic;
+
+        public String getValue() {
+            return value;
+        }
+
+        RomanNumerals(String value, int arabic) {
+            this.value = value;
+            this.arabic = arabic;
+        }
+
+        public int getArabic() {
+            return arabic;
+        }
+
+        public void setArabic(int arabic) {
+            this.arabic = arabic;
+        }
     }
 }
