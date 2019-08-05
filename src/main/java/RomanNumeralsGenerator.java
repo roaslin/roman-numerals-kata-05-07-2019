@@ -3,6 +3,12 @@ public class RomanNumeralsGenerator {
 
         String numeral = "";
 
+        if(arabicNumber >= 10){
+
+            numeral += "X";
+            arabicNumber -=10;
+        }
+
         if(arabicNumber >= 5){
 
             numeral += "V";
