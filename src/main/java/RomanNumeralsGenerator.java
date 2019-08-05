@@ -1,14 +1,12 @@
 public class RomanNumeralsGenerator {
     public String generate(int arabicNumber) {
 
-        String numeral = ""
-                ;
-        if(arabicNumber == 6){
-            return "VI";
-        }
+        String numeral = "";
 
-        if(arabicNumber == 5){
-            return "V";
+        if(arabicNumber >= 5){
+
+            numeral += "V";
+            arabicNumber -=5;
         }
 
 
