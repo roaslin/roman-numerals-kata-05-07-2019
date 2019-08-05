@@ -11,6 +11,7 @@ public class RomanNumeralsGeneratorShould {
         RomanNumeralsGenerator generator = new RomanNumeralsGenerator();
         assertThat(generator.generate(1), is("I"));
         assertThat(generator.generate(2), is("II"));
+        assertThat(generator.generate(3), is("III"));
     }
 
 }
