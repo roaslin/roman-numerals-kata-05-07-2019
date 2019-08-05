@@ -1,6 +1,9 @@
 public class RomanNumeralsGenerator {
     public String generate(int arabicNumber) {
 
+        if(arabicNumber == 5){
+            return "V";
+        }
 
         if(arabicNumber == 3){
             return "III";

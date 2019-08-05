@@ -12,6 +12,9 @@ public class RomanNumeralsGeneratorShould {
         assertThat(generator.generate(1), is("I"));
         assertThat(generator.generate(2), is("II"));
         assertThat(generator.generate(3), is("III"));
+
+
+        assertThat(generator.generate(5), is("V"));
     }
 
 }
